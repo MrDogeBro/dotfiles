@@ -1552,7 +1552,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
   # ======= Only add newline if conditions are met =======
   function p10k-on-pre-prompt() {
     emulate -L zsh -o extended_glob
-    if [[ -n ./(../)#(.git)(#qN/) ]]; then
+    if [[ -n ./(../)#(.git)(#qN/) ]] || [[ "$VIRTUAL_ENV" == *"/.venv" ]]; then
       p10k display '1'=show '2/left/(os_icon|dir)'=hide '2/right'=hide
     else
       p10k display '1'=hide '2/left/(os_icon|dir)'=show '2/right'=show
