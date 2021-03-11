@@ -27,7 +27,7 @@ fi
 
 # add pio cli to path
 if [ -d "$HOME/.platformio/penv/bin" ]; then
-  export PATH="$HOME/.platformio/penv/bin:$PATH"
+  export PATH="$PATH:$HOME/.platformio/penv/bin"
 fi
 
 # set command for fzf to use
