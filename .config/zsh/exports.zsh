@@ -25,5 +25,10 @@ if [ -d "$HOME/Documents/Projects/Python/Scripts/bin" ]; then
   export PATH="$HOME/Documents/Projects/Python/Scripts/bin:$PATH"
 fi
 
+# add pio cli to path
+if [ -d "$HOME/.platformio/penv/bin" ]; then
+  export PATH="$HOME/.platformio/penv/bin:$PATH"
+fi
+
 # set command for fzf to use
 export FZF_DEFAULT_COMMAND='rg --files --hidden'
