@@ -62,6 +62,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }}
     " Tabnine
     " Plug 'zxqfl/tabnine-vim'
+    " Async LSP
+    " Plug 'prabirshrestha/vim-lsp'
+    " PlatformIO integration
+    Plug 'coddingtonbear/neomake-platformio'
 
     call plug#end()
 
