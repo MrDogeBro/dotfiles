@@ -163,7 +163,7 @@ let g:which_key_map.g = {
 " t is for terminal
 let g:which_key_map.t = {
       \ 'name' : '+terminal' ,
-      \ ';' : [':FloatermNew --wintype=normal --height=8'        , 'terminal'],
+      \ ';' : [':FloatermNew --wintype=normal --height=8'       , 'terminal'],
       \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
       \ 'g' : [':FloatermNew lazygit'                           , 'git'],
       \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
@@ -176,3 +176,8 @@ let g:which_key_map.t = {
       \ 's' : [':FloatermNew ncdu'                              , 'ncdu'],
       \ }
 
+" m is for make
+let g:which_key_map.m = {
+      \ 'name' : '+make' ,
+      \ 'a' : [':make upload'                              , 'arduino'],
+      \ }
