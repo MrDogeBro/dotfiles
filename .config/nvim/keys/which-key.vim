@@ -179,5 +179,5 @@ let g:which_key_map.t = {
 " m is for make
 let g:which_key_map.m = {
       \ 'name' : '+make' ,
-      \ 'a' : [':make upload | copen 55'                              , 'arduino'],
+      \ 'a' : ['<C-S-A-a>'                              , 'arduino'],
       \ }
