@@ -38,7 +38,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " Execute commands
-nnoremap <C-S-A-a> :make upload<CR>
+nnoremap <C-S-A-a> :make upload<CR><CR>
 
 nnoremap <Leader>o o<Esc>^Da
 nnoremap <Leader>O O<Esc>^Da
