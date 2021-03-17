@@ -180,4 +180,5 @@ let g:which_key_map.t = {
 let g:which_key_map.m = {
       \ 'name' : '+make' ,
       \ 'a' : ['<C-S-A-a>'                              , 'arduino'],
+      \ 'l' : [':copen 25'                              , 'view log'],
       \ }
