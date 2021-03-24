@@ -23,7 +23,7 @@ menuSelected="$(echo -e "$options" | rofi -dmenu -p "Arch" -config $HOME/scripts
 
 case $menuSelected in
   $option0)
-    alacritty --option font.size=8.5 -e sh -c 'neofetch; while true; do sleep 1; done'
+    alacritty --option font.size=8.5 -e bash -c 'neofetch; while true; do sleep 1; done'
     ;;
   $option1)
     reboot
