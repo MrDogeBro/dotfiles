@@ -11,8 +11,13 @@ plugins=(git gitignore virtualenv sudo vi-mode)
 source $ZSH/oh-my-zsh.sh
 
 # load cli functions
-eval "$(zoxide init zsh)"
-eval "$(quicknav init zsh)"
+if [ -x "$(command -v zoxide)" ]; then
+  eval "$(zoxide init zsh)"
+fi
+
+if [ -x "$(command -v quicknav)" ]; then
+  eval "$(quicknav init zsh)"
+fi
 
 if [ -x "$(command -v pyenv)" ]; then
   eval "$(pyenv init -)"
