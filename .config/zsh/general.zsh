@@ -14,6 +14,10 @@ source $ZSH/oh-my-zsh.sh
 eval "$(zoxide init zsh)"
 eval "$(quicknav init zsh)"
 
+if [ -x "$(command -v pyenv)" ]; then
+  eval "$(pyenv init -)"
+fi
+
 # ========= Plugin Config =========
 # vi-mode
 VI_MODE_SET_CURSOR=false
