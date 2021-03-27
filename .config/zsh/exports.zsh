@@ -25,6 +25,11 @@ if [ -d "$HOME/Documents/Projects/Python/Scripts/bin" ]; then
   export PATH="$HOME/Documents/Projects/Python/Scripts/bin:$PATH"
 fi
 
+# add python 3.8 bin to path
+if [ -d "/Library/Frameworks/Python.framework/Versions/3.8/bin" ]; then
+  export PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:$PATH"
+fi
+
 # add pio cli to path
 if [ -d "$HOME/.platformio/penv/bin" ]; then
   export PATH="$PATH:$HOME/.platformio/penv/bin"
