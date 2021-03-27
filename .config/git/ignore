@@ -54,6 +54,7 @@ Temporary Items
 # Session
 Session.vim
 Sessionx.vim
+.vim
 
 # Temporary
 .netrwhist
