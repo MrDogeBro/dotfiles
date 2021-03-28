@@ -28,6 +28,10 @@ alias dst="dot status -sb"
 # shorthand git
 alias gst="git status -sb"
 
+# shorthand python venv
+alias va="source .venv/bin/activate"
+alias vd="deactivate"
+
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   # fix alacritty font size on linux
   alias alacritty="command alacritty --option font.size=8.5"
