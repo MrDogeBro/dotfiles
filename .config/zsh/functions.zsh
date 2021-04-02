@@ -12,8 +12,14 @@ lsf () { command ls -A $1 | fzf }
 # =========================================
 # git add commit
 gac () {
-  git add "$1"
-  git commit -m "$2"
+  message=${@:$#}
+  files=(${@:1:$# - 1})
+
+  for file in $files; do
+    git add "$file"
+  done
+
+  git commit -m "$message"
 }
 
 # git add commit push
@@ -37,8 +43,14 @@ dot push
 
 # dotfiles add commit
 dac () {
-  dot add "$1"
-  dot commit -m "$2"
+  message=${@:$#}
+  files=(${@:1:$# - 1})
+
+  for file in $files; do
+    dot add "$file"
+  done
+
+  dot commit -m "$message"
 }
 
 # dotfiles add commit push
