@@ -1,5 +1,5 @@
 " Dynamically get and set paths if exists
-let python_path = substitute(system("which -a python3 | rg \"/usr/\""), '\n', '', 'g')
+let python_path = substitute(system("~/.config/nvim/scripts/python-path.sh"), '\n', '', 'g')
 if v:shell_error == 0
   let g:python3_host_prog = expand(python_path)
 endif
