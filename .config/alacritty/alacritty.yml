@@ -12,7 +12,7 @@ scrolling:
   history: 10000
   multiplier: 3
 
-background_opacity: 0.96
+background_opacity: 1
 
 # Font config
 font:
@@ -37,7 +37,7 @@ font:
 colors:
   # Default colors
   primary:
-    background: '0x0e1114'
+    background: '0x15171A'
     foreground: '0xd6d6d6'
 
   # Normal colors
