@@ -37,4 +37,4 @@ nnoremap <Leader>o o<Esc>^Da
 nnoremap <Leader>O O<Esc>^Da
 
 " Better terminal modes
-tnoremap <C-s> <C-\><C-d>
+tnoremap <C-s> <C-\><C-n>
