@@ -42,3 +42,6 @@ nnoremap <C-S-A-a> :make upload<CR><CR>
 
 nnoremap <Leader>o o<Esc>^Da
 nnoremap <Leader>O O<Esc>^Da
+
+" Better terminal modes
+tnoremap <C-s> <C-\><C-d>
