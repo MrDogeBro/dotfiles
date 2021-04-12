@@ -32,6 +32,10 @@ alias gst="git status -sb"
 alias va="source .venv/bin/activate"
 alias vd="deactivate"
 
+# neovim alias
+alias nv="VIMRUNTIME=$HOME/builds/neovim/runtime $HOME/builds/neovim/build/bin/nvim"
+
+# linux only
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   # fix alacritty font size on linux
   alias alacritty="command alacritty --option font.size=8.5"
