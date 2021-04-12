@@ -33,7 +33,7 @@ alias va="source .venv/bin/activate"
 alias vd="deactivate"
 
 # neovim alias
-alias nv="VIMRUNTIME=$HOME/builds/neovim/runtime $HOME/builds/neovim/build/bin/nvim"
+alias nv="VIMRUNTIME=$HOME/builds/neovim/runtime $HOME/builds/neovim/build/bin/nvim -u $HOME/.config/nvim-nightly/init.lua"
 
 # linux only
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
