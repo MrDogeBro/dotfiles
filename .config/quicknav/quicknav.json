@@ -53,9 +53,16 @@
       "description": "Takes you to the rust projects folder.",
       "location": "~/Documents/Projects/Rust",
       "calls": ["rust", "rs"]
+    },
+    {
+      "name": "YouTube",
+      "description": "Takes you to the YouTube projects folder.",
+      "location": "~/Documents/Projects/YouTube",
+      "calls": ["youtube", "yt"]
     }
   ],
   "options": {
     "create_missing_directories": false
   }
 }
+
