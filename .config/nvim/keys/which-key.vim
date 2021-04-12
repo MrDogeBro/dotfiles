@@ -163,6 +163,8 @@ let g:which_key_map.g = {
 " t is for terminal
 let g:which_key_map.t = {
       \ 'name' : '+terminal' ,
+      \ 'v' : [':vsplit term://zsh'                             , 'vsplit term'],
+      \ 'h' : [':split term://zsh'                              , 'vsplit term'],
       \ ';' : [':FloatermNew --wintype=normal --height=8'       , 'terminal'],
       \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
       \ 'g' : [':FloatermNew lazygit'                           , 'git'],
