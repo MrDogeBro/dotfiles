@@ -17,21 +17,23 @@ background_opacity: 1
 # Font config
 font:
   normal:
-    family: JetBrainsMono Nerd Font
+    family: JetBrainsMono Nerd Font Mono
     style: Medium
 
   bold:
-    family: JetBrainsMono Nerd Font
+    family: JetBrainsMono Nerd Font Mono
     style: Bold
 
   italic:
-    family: JetBrainsMono Nerd Font
+    family: JetBrainsMono Nerd Font Mono
     style: Italic
 
   size: 11.0
   offset:
     x: 0
     y: 0
+
+  use_thin_strokes: true
 
 # Color config
 colors:
