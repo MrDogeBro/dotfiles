@@ -59,10 +59,15 @@
       "description": "Takes you to the YouTube projects folder.",
       "location": "~/Documents/Projects/YouTube",
       "calls": ["youtube", "yt"]
+    },
+    {
+      "name": "Google Script",
+      "description": "Takes you to the google script projects folder.",
+      "location": "~/Documents/Projects/GoogleScript",
+      "calls": ["google", "gscript", "gas", "gs"]
     }
   ],
   "options": {
     "create_missing_directories": false
   }
 }
-
