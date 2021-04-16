@@ -15,3 +15,11 @@ function! NextBufferTab()
     endif
   endif
 endfunction
+
+function! ToggleRelativeLineNumbers()
+  if &relativenumber == 1
+    execute('set norelativenumber')
+  else
+    execute('set relativenumber')
+  endif
+endfunction
