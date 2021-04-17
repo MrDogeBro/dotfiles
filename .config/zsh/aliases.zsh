@@ -37,7 +37,8 @@ alias nv="VIMRUNTIME=$HOME/builds/neovim/runtime $HOME/builds/neovim/build/bin/n
 # alias nv="VIMRUNTIME=$HOME/builds/neovim/runtime $HOME/builds/neovim/build/bin/nvim -u $HOME/.config/nvim-nightly/init.lua"
 
 # shorthand clasp
-alias crr="clasp push && clasp run"
+alias cpr="clasp push && clasp run"
+alias cr="clasp run"
 
 # linux only
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
