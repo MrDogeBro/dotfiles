@@ -36,6 +36,9 @@ alias vd="deactivate"
 alias nv="VIMRUNTIME=$HOME/builds/neovim/runtime $HOME/builds/neovim/build/bin/nvim"
 # alias nv="VIMRUNTIME=$HOME/builds/neovim/runtime $HOME/builds/neovim/build/bin/nvim -u $HOME/.config/nvim-nightly/init.lua"
 
+# shorthand clasp
+alias crr="clasp push && clasp run"
+
 # linux only
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   # fix alacritty font size on linux
