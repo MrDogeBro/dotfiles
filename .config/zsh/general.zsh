@@ -23,6 +23,12 @@ if [ -x "$(command -v pyenv)" ]; then
   eval "$(pyenv init -)"
 fi
 
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  if [ -x "$(command -v docker-machine)" ] && [ -x "$(command -v docker)" ]; then
+    eval "$(docker-machine env dockerbox)"
+  fi
+fi
+
 # ========= Plugin Config =========
 # vi-mode
 VI_MODE_SET_CURSOR=false
