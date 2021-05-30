@@ -4,8 +4,8 @@ window:
     columns: 140
     lines: 38
   padding:
-    x: 10
-    y: 10
+    x: 6
+    y: 6
   decorations: none # remove window borders
 
 scrolling:
