@@ -20,6 +20,7 @@ if [ -x "$(command -v quicknav)" ]; then
 fi
 
 if [ -x "$(command -v pyenv)" ]; then
+  eval "$(pyenv init --path)"
   eval "$(pyenv init -)"
 fi
 
