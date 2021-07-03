@@ -101,6 +101,15 @@
         "gas",
         "gs"
       ]
+    },
+    {
+      "name": "Random Scripts",
+      "description": "Takes you to the random scripts folder.",
+      "location": "~/Documents/Projects/RandomScripts",
+      "calls": [
+        "randomscripts",
+        "randscrip"
+      ]
     }
   ],
   "options": {
