@@ -1,6 +1,7 @@
 # shortened commands
 alias c="clear"
 alias n="nav"
+alias qn="quicknav"
 alias p="ping 8.8.8.8"
 alias p30="ping -i 30 8.8.8.8"
 
