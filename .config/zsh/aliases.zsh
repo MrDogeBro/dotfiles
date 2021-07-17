@@ -28,6 +28,7 @@ alias dst="dot status -sb"
 
 # shorthand git
 alias gst="git status -sb"
+alias glog="git log --graph --date=format-local:\"%T %m-%d-%y\" --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset'"
 
 # shorthand python venv
 alias va="source .venv/bin/activate"
