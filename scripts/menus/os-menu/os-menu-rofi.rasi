@@ -1,6 +1,6 @@
 configuration {
 	width: 14;
-	lines: 5;
+	lines: 6;
 	columns: 1;
 	font: "SF Pro Text 10";
 	bw: 1;

@@ -38,6 +38,7 @@
     background-color: @background;
     border:           0;
     padding:          10;
+    font: "SF Pro Text 10";
 }
 #mainbox {
     border:  0;
