@@ -92,7 +92,7 @@
       ]
     },
     {
-      "name": "Google Script",
+      "name": "GoogleScript",
       "description": "Takes you to the google script projects folder.",
       "location": "~/Documents/Projects/GoogleScript",
       "calls": [
@@ -103,7 +103,7 @@
       ]
     },
     {
-      "name": "Random Scripts",
+      "name": "RandomScripts",
       "description": "Takes you to the random scripts folder.",
       "location": "~/Documents/Projects/RandomScripts",
       "calls": [
