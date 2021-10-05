@@ -110,6 +110,14 @@
         "randomscripts",
         "randscrip"
       ]
+    },
+    {
+      "name": "Go",
+      "description": "go",
+      "location": "~/Documents/Projects/Go",
+      "calls": [
+        "go"
+      ]
     }
   ],
   "options": {
