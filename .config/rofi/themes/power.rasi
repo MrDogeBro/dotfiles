@@ -1,0 +1,10 @@
+@import "shared/option-menu.rasi"
+
+window {
+  width: 1230px;
+  height: 250px;
+}
+
+listview {
+  lines: 5;
+}
