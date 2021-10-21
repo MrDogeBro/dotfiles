@@ -1,0 +1,1 @@
+quicknav init fish | source
