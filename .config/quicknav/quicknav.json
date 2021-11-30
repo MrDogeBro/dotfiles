@@ -118,6 +118,22 @@
       "calls": [
         "go"
       ]
+    },
+    {
+      "name": "Templates",
+      "description": "templates",
+      "location": "~/Documents/Projects/Templates",
+      "calls": [
+        "templates"
+      ]
+    },
+    {
+      "name": "MrDogeBro",
+      "description": "mrdogebro",
+      "location": "~/Documents/Projects/MrDogeBro",
+      "calls": [
+        "mrdogebro"
+      ]
     }
   ],
   "options": {
