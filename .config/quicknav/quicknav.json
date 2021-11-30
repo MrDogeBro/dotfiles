@@ -124,7 +124,8 @@
       "description": "templates",
       "location": "~/Documents/Projects/Templates",
       "calls": [
-        "templates"
+        "templates",
+        "temp"
       ]
     },
     {
@@ -132,7 +133,8 @@
       "description": "mrdogebro",
       "location": "~/Documents/Projects/MrDogeBro",
       "calls": [
-        "mrdogebro"
+        "mrdogebro",
+        "mdb"
       ]
     }
   ],
