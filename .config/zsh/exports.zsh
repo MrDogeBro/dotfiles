@@ -30,5 +30,10 @@ if [ -d "$HOME/.platformio/penv/bin" ]; then
   export PATH="$PATH:$HOME/.platformio/penv/bin"
 fi
 
+# add lvim to path
+if [ -d "$HOME/.local/bin" ]; then
+  export PATH="$PATH:$HOME/.local/bin"
+fi
+
 # set command for fzf to use
 export FZF_DEFAULT_COMMAND='rg --files --hidden'
