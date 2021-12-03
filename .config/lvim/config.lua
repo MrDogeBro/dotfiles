@@ -83,6 +83,9 @@ lvim.builtin.treesitter.highlight.enabled = true
 
 vim.opt.relativenumber = true;
 
+vim.api.nvim_set_keymap('n', '<TAB>', ':bnext<CR>', { noremap = true, silent = true });
+vim.api.nvim_set_keymap('n', '<S-TAB>', ':bprev<CR>', { noremap = true, silent = true });
+
 -- ==============================================
 --                Extra Config
 -- ==============================================
