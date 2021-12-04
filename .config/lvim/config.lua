@@ -81,10 +81,16 @@ lvim.builtin.treesitter.highlight.enabled = true
 --                Custom Prefs
 -- ==============================================
 
-vim.opt.relativenumber = true;
+vim.opt.relativenumber = true
 
-vim.api.nvim_set_keymap('n', '<TAB>', ':bnext<CR>', { noremap = true, silent = true });
-vim.api.nvim_set_keymap('n', '<S-TAB>', ':bprev<CR>', { noremap = true, silent = true });
+vim.api.nvim_set_keymap('n', '<TAB>', ':bnext<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<S-TAB>', ':bprev<CR>', { noremap = true, silent = true })
+
+lvim.lsp.automatic_servers_installation = false
+
+-- python settings
+local opts = {} -- check the lspconfig documentation for a list of all possible options
+require("lvim.lsp.manager").setup("pylsp", opts)
 
 -- ==============================================
 --                Extra Config
