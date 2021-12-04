@@ -35,5 +35,9 @@ if [ -d "$HOME/.local/bin" ]; then
   export PATH="$PATH:$HOME/.local/bin"
 fi
 
+if [ -x "$(command -v brew)" ]; then
+  export HOMEBREW_NO_AUTO_UPDATE=1
+fi
+
 # set command for fzf to use
 export FZF_DEFAULT_COMMAND='rg --files --hidden'
