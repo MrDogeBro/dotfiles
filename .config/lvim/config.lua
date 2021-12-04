@@ -86,11 +86,13 @@ vim.opt.relativenumber = true
 vim.api.nvim_set_keymap('n', '<TAB>', ':bnext<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<S-TAB>', ':bprev<CR>', { noremap = true, silent = true })
 
-lvim.lsp.automatic_servers_installation = false
+lvim.lsp.automatic_servers_installation = true
 
 -- python settings
-local opts = {} -- check the lspconfig documentation for a list of all possible options
-require("lvim.lsp.manager").setup("pylsp", opts)
+vim.list_extend(lvim.lsp.override, { "pyright" }) -- remove pyright
+
+local opts = { filetypes = { "python" } } -- check the lspconfig documentation for a list of all possible options
+require("lvim.lsp.manager").setup("pylsp", opts) -- setup pylsp
 
 -- ==============================================
 --                Extra Config
