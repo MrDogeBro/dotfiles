@@ -93,21 +93,25 @@ lvim.builtin.which_key.mappings["v"] = { "<cmd>vsplit<CR>", "Vertical Split" }
 lvim.builtin.which_key.mappings["h"] = { "<cmd>split<CR>", "Horizontal Split" }
 
 -- python settings
-vim.list_extend(lvim.lsp.override, { "pyright" }) -- remove pyright
+-- vim.list_extend(lvim.lsp.override, { "pyright" }) -- remove pyright
 
-local opts = { filetypes = { "python" } } -- check the lspconfig documentation for a list of all possible options
-require("lvim.lsp.manager").setup("pylsp", opts) -- setup pylsp
+-- local opts = { filetypes = { "python" } } -- check the lspconfig documentation for a list of all possible options
+-- require("lvim.lsp.manager").setup("pylsp", opts) -- setup pylsp
 
 -- set additional linters
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
   { exe = "flake8", filetypes = { "python" } },
-  -- {
-  --   exe = "codespell",
-  --   ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
-  --   filetypes = { "javascript", "python" },
-  -- },
+  { exe = "codespell", filetypes = { "python" } },
 }
+
+-- set formatters linters
+local formatters = require "lvim.lsp.null-ls.formatters"
+formatters.setup {
+  { exe = "isort", filetypes = { "python" } },
+  { exe = "black", filetypes = { "python" } },
+}
+
 
 -- ==============================================
 --                Extra Config
