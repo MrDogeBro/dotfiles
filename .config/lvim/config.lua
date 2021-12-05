@@ -89,8 +89,11 @@ vim.api.nvim_set_keymap('n', '<S-TAB>', ':bprev<CR>', { noremap = true, silent =
 lvim.lsp.automatic_servers_installation = true
 
 -- keybinds
-lvim.builtin.which_key.mappings["v"] = { "<cmd>vsplit<CR>", "Vertical Split" }
-lvim.builtin.which_key.mappings["h"] = { "<cmd>split<CR>", "Horizontal Split" }
+lvim.builtin.which_key.mappings["w"] = { 
+  name = "Window",
+  v = { "<cmd>vsplit<CR>", "Vertical Split" },
+  h = { "<cmd>split<CR>", "Horizontal Split" },
+}
 
 -- python settings
 -- vim.list_extend(lvim.lsp.override, { "pyright" }) -- remove pyright
