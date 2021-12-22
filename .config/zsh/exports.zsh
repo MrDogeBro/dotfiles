@@ -35,8 +35,17 @@ if [ -d "$HOME/.local/bin" ]; then
   export PATH="$PATH:$HOME/.local/bin"
 fi
 
-if [ -x "$(command -v brew)" ]; then
-  export HOMEBREW_NO_AUTO_UPDATE=1
+# macos only
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  # add postgresql to path
+  if [ -d "/Library/PostgreSQL/10/bin" ]; then
+    export PATH="$PATH:/Library/PostgreSQL/10/bin"
+  fi
+
+  # make brew not update on pkg install
+  if [ -x "$(command -v brew)" ]; then
+    export HOMEBREW_NO_AUTO_UPDATE=1
+  fi
 fi
 
 # set command for fzf to use
