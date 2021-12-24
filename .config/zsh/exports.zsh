@@ -21,8 +21,8 @@ if [ -f "/usr/local/opt/ruby/bin" ]; then
 fi
 
 # add python scripts bin to path
-if [ -d "$HOME/Documents/Projects/RandomScripts" ]; then
-  source "$HOME/Documents/Projects/RandomScripts/bin/add-to-path.sh"
+if [ -d "$HOME/Programs/RandomScripts" ]; then
+  source "$HOME/Programs/RandomScripts/bin/add-to-path.sh"
 fi
 
 # add pio cli to path
