@@ -6,135 +6,88 @@
       "location": "~/.config",
       "calls": [
         "config",
-        "conf",
-        "cf"
+        "conf"
       ]
     },
     {
-      "name": "Projects",
-      "description": "Takes you to the projects folder.",
-      "location": "~/Documents/Projects",
+      "name": "Programs",
+      "description": "Takes you to the programs folder.",
+      "location": "~/Programs",
       "calls": [
-        "projects",
-        "proj"
+        "programs",
+        "prog"
       ]
     },
     {
-      "name": "Python",
-      "description": "Takes you to the python projects folder.",
-      "location": "~/Documents/Projects/Python",
+      "name": "Organizations",
+      "description": "Takes you to the organizations programs folder.",
+      "location": "~/Programs/Organizations",
       "calls": [
-        "python",
-        "py"
+        "organizations",
+        "orgs"
       ]
     },
     {
-      "name": "Javascript",
-      "description": "Takes you to the javascript projects folder.",
-      "location": "~/Documents/Projects/Javascript",
+      "name": "People",
+      "description": "Takes you to the people programs folder.",
+      "location": "~/Programs/People",
       "calls": [
-        "javascript",
-        "js"
+        "people",
+        "peps"
       ]
     },
     {
-      "name": "Websites",
-      "description": "Takes you to the websites projects folder.",
-      "location": "~/Documents/Projects/Websites",
+      "name": "MrDogeBro",
+      "description": "Takes you to the MrDogeBro programs folder.",
+      "location": "~/Programs/People/MrDogeBro",
       "calls": [
-        "websites",
-        "web"
+        "mrdogebro",
+        "mdb"
       ]
     },
     {
-      "name": "Extendscript",
-      "description": "Takes you to the extendscript projects folder.",
-      "location": "~/Documents/Projects/Extendscript",
+      "name": "MrDogeBro-Org",
+      "description": "Takes you to the MrDogeBro-org programs folder.",
+      "location": "~/Programs/Organizations/MrDogeBro",
       "calls": [
-        "extendscript",
-        "es"
+        "mrdogebro-org",
+        "morg"
       ]
     },
     {
-      "name": "Java",
-      "description": "Takes you to the java projects folder.",
-      "location": "~/Documents/Projects/Java",
+      "name": "Tutorials",
+      "description": "Takes you to the MrDogeBro Tutorials programs folder.",
+      "location": "~/Programs/Organizations/Tutorials",
       "calls": [
-        "java",
-        "jv"
+        "tutorials",
+        "tuts"
       ]
     },
     {
-      "name": "Electronics",
-      "description": "Takes you to the electronics projects folder.",
-      "location": "~/Documents/Projects/Electronics",
+      "name": "Droid",
+      "description": "Takes you to the Droid programs folder.",
+      "location": "~/Programs/Organizations/Droid",
       "calls": [
-        "electronics",
-        "elec"
+        "droid",
+        "drd"
       ]
     },
     {
-      "name": "Rust",
-      "description": "Takes you to the rust projects folder.",
-      "location": "~/Documents/Projects/Rust",
+      "name": "Carberra",
+      "description": "Takes you to the Carberra programs folder.",
+      "location": "~/Programs/Organizations/Carberra",
       "calls": [
-        "rust",
-        "rs"
-      ]
-    },
-    {
-      "name": "YouTube",
-      "description": "Takes you to the YouTube projects folder.",
-      "location": "~/Documents/Projects/YouTube",
-      "calls": [
-        "youtube",
-        "yt"
-      ]
-    },
-    {
-      "name": "GoogleScript",
-      "description": "Takes you to the google script projects folder.",
-      "location": "~/Documents/Projects/GoogleScript",
-      "calls": [
-        "google",
-        "gscript",
-        "gas",
-        "gs"
-      ]
-    },
-    {
-      "name": "RandomScripts",
-      "description": "Takes you to the random scripts folder.",
-      "location": "~/Documents/Projects/RandomScripts",
-      "calls": [
-        "randomscripts",
-        "randscrip"
-      ]
-    },
-    {
-      "name": "Go",
-      "description": "go",
-      "location": "~/Documents/Projects/Go",
-      "calls": [
-        "go"
+        "carberra",
+        "carbs"
       ]
     },
     {
       "name": "Templates",
       "description": "templates",
-      "location": "~/Documents/Projects/Templates",
+      "location": "~/Programs/Templates",
       "calls": [
         "templates",
         "temp"
-      ]
-    },
-    {
-      "name": "MrDogeBro",
-      "description": "mrdogebro",
-      "location": "~/Documents/Projects/MrDogeBro",
-      "calls": [
-        "mrdogebro",
-        "mdb"
       ]
     }
   ],
