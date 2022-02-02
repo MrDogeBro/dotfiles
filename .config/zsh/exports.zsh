@@ -5,7 +5,7 @@ export ZSH="$HOME/.oh-my-zsh"
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='nvim'
+  export EDITOR='lvim'
 fi
 
 # add cargo to path
