@@ -53,3 +53,8 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   alias pac="pacman"
   alias spac="sudo pacman"
 fi
+
+# macos only
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  alias ngxconf="$EDITOR /usr/local/nginx/conf/nginx.conf"
+fi
