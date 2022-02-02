@@ -47,6 +47,11 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH="$PATH:/usr/local/nginx/sbin"
   fi
 
+  # add macports to path
+  if [ -d "/opt/local/bin" ]; then
+    export PATH=$PATH:/opt/local/bin:/opt/local/sbin
+  fi
+
   # make brew not update on pkg install
   if [ -x "$(command -v brew)" ]; then
     export HOMEBREW_NO_AUTO_UPDATE=1
