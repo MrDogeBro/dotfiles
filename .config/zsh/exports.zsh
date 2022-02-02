@@ -42,6 +42,11 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH="$PATH:/Library/PostgreSQL/10/bin"
   fi
 
+  # add nginx to path
+  if [ -d "/usr/local/nginx/sbin" ]; then
+    export PATH="$PATH:/usr/local/nginx/sbin"
+  fi
+
   # make brew not update on pkg install
   if [ -x "$(command -v brew)" ]; then
     export HOMEBREW_NO_AUTO_UPDATE=1
