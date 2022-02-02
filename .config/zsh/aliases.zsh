@@ -56,5 +56,5 @@ fi
 
 # macos only
 if [[ "$OSTYPE" == "darwin"* ]]; then
-  alias ngxconf="$EDITOR /usr/local/nginx/conf/nginx.conf"
+  alias ngxconf="sudo $EDITOR /usr/local/nginx/conf/nginx.conf"
 fi
