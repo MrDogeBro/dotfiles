@@ -56,5 +56,6 @@ fi
 
 # macos only
 if [[ "$OSTYPE" == "darwin"* ]]; then
-  alias ngxconf="sudo $EDITOR /usr/local/nginx/conf/nginx.conf"
+  alias ngxconf="$EDITOR /opt/homebrew/etc/nginx/nginx.conf"
+  alias bs="brew services"
 fi
