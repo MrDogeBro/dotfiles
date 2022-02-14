@@ -35,6 +35,11 @@ if [ -d "$HOME/.local/bin" ]; then
   export PATH="$PATH:$HOME/.local/bin"
 fi
 
+#add yarn bin to path
+if [ -x "$(command -v yarn)" ]; then
+  export PATH="$PATH:$(yarn global bin)"
+fi
+
 # macos only
 if [[ "$OSTYPE" == "darwin"* ]]; then
   # add postgresql to path
