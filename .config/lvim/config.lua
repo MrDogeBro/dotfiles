@@ -89,7 +89,7 @@ vim.opt.relativenumber = true
 lvim.lsp.automatic_servers_installation = true
 
 -- keybinds
-lvim.builtin.which_key.mappings["w"] = { 
+lvim.builtin.which_key.mappings["w"] = {
   name = "Window",
   v = { "<cmd>vsplit<CR>", "Vertical Split" },
   h = { "<cmd>split<CR>", "Horizontal Split" },
@@ -113,6 +113,7 @@ local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { exe = "isort", filetypes = { "python" } },
   { exe = "black", filetypes = { "python" } },
+  { exe = "prettier", filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" } },
 }
 
 
