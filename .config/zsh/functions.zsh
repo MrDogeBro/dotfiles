@@ -81,6 +81,58 @@ fbkill () {
   kill $processId 
 }
 
+# update to a new python version with dependencies
+pyupdate () {
+  if [ -z "$1" ]; then
+    echo "New python version not passed in!"
+    return 1
+  fi
+
+  echo "Upgrading pip..."
+  pip install -U pip
+  echo -e "Pip upgraded\n\nPick which dependencies to transfered..."
+  
+  packagesKeep=("setuptools" "wheel" "pip" "pynvim")
+
+  packages=($(pip list | awk '(NR>2) {print $1}'))
+  newPackages=()
+
+  for i in "${packages[@]}"; do
+    for k in "${packagesKeep[@]}"; do
+      if [[ "$i" == "$k" ]]; then
+        newPackages+=("$i")
+        continue 2
+      fi
+    done
+
+    read choise"?Would you like to keep the package \"$i\"? (Y/n): "
+
+    if [ "$choise" != "" ] && [[ "$choise" == "n" ]]; then
+      echo "Not transfering package \"$i\""
+      continue
+    fi
+
+    newPackages+=("$i")
+  done
+
+  echo -e "Dependencies to transfer picked\n\nInstalling python $1..."
+
+  if [[ "$OSTYPE" == "darwin"* ]]; then
+    echo "    Updating pyenv (via brew)..."
+    brew update && brew upgrade pyenv
+    echo -e "    Pyenv updated\n"
+  fi
+
+  pyenv install -s $1
+  pyenv global $1
+
+  echo -e "Python $1 installed\n\nTransfering dependencies..."
+
+  pip install "${newPackages[@]}"
+
+  echo -e "Dependencies transfered\n\nDone!" 
+}
+
 # =========================================
 #               background
 # =========================================
