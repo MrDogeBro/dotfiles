@@ -73,6 +73,15 @@ dcap () {
 }
 
 # =========================================
+#               utils
+# =========================================
+# kill firebase process by port
+fbkill () {
+  processId=$(lsof -nP -iTCP -sTCP:LISTEN | grep $1 | awk '{ print $2 }')
+  kill $processId 
+}
+
+# =========================================
 #               background
 # =========================================
 # cross platform colored output for ls
