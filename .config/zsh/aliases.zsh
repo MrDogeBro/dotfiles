@@ -35,6 +35,7 @@ alias glru="git pull --rebase upstream"
 # shorthand python venv
 alias va="source .venv/bin/activate"
 alias vd="deactivate"
+alias newvenv="python3 -m venv .venv"
 
 # neovim alias
 alias nv="VIMRUNTIME=$HOME/builds/neovim/runtime $HOME/builds/neovim/build/bin/nvim"
