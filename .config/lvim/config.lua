@@ -78,6 +78,59 @@ lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
 -- ==============================================
+--                User Plugins
+-- ==============================================
+
+lvim.plugins = {
+  {
+    "tzachar/cmp-tabnine",
+    run = "./install.sh",
+    requires = "hrsh7th/nvim-cmp",
+  },
+  {
+    "sindrets/diffview.nvim",
+    event = "BufRead",
+  },
+  {
+    "windwp/nvim-ts-autotag",
+    event = "InsertEnter",
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end,
+  },
+  {
+    "folke/todo-comments.nvim",
+    event = "BufRead",
+    config = function()
+      require("todo-comments").setup()
+    end,
+  },
+  {
+    "tpope/vim-surround",
+    -- keys = {"c", "d", "y"}
+    -- make sure to change the value of `timeoutlen` if it's not triggering correctly, see https://github.com/tpope/vim-surround/issues/117
+    -- setup = function()
+      --  vim.o.timeoutlen = 500
+    -- end
+  },
+}
+
+-- tabnine config
+local tabnine = require('cmp_tabnine.config')
+tabnine:setup({
+	max_lines = 1000;
+	max_num_results = 20;
+	sort = true;
+	run_on_every_keystroke = true;
+	snippet_placeholder = '..';
+	ignored_file_types = { -- default is not to ignore
+		-- uncomment to ignore in lua:
+		-- lua = true
+	};
+	show_prediction_strength = false;
+})
+
+-- ==============================================
 --                Custom Prefs
 -- ==============================================
 
@@ -115,7 +168,6 @@ formatters.setup {
   { exe = "black", filetypes = { "python" } },
   { exe = "prettier", filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "html", "css", "scss", "sass" } },
 }
-
 
 -- ==============================================
 --                Extra Config
