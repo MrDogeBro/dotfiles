@@ -20,5 +20,6 @@ configuration {
 /*	line-margin: 2;*/
 /*	line-padding: 1;*/
 	hide-scrollbar: true;
-	theme: "main-theme";
 }
+
+@theme "main-theme"

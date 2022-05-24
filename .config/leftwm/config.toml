@@ -221,16 +221,3 @@ command = "MoveToTag"
 value = "9"
 modifier = ["modkey", "Shift"]
 key = "9"
-
-[[keybind]]
-command = "IncreaseMainWidth"
-value = "1"
-modifier = ["modkey", "Shift"]
-key = "l"
-
-[[keybind]]
-command = "DecreaseMainWidth"
-value = "1"
-modifier = ["modkey", "Shift"]
-key = "h"
-
