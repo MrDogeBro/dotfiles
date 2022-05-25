@@ -112,7 +112,7 @@ lvim.plugins = {
     -- keys = {"c", "d", "y"}
     -- make sure to change the value of `timeoutlen` if it's not triggering correctly, see https://github.com/tpope/vim-surround/issues/117
     -- setup = function()
-      --  vim.o.timeoutlen = 500
+    --  vim.o.timeoutlen = 500
     -- end
   },
 }
@@ -120,17 +120,15 @@ lvim.plugins = {
 -- tabnine config
 local tabnine = require('cmp_tabnine.config')
 tabnine:setup({
-	max_lines = 1000;
-	max_num_results = 20;
-	sort = true;
-	run_on_every_keystroke = true;
-	snippet_placeholder = '..';
-	ignored_file_types = { -- default is not to ignore
-		-- uncomment to ignore in lua:
-		-- lua = true
-	};
-	show_prediction_strength = false;
+  max_lines = 1000;
+  max_num_results = 20;
+  sort = true;
+  run_on_every_keystroke = true;
+  snippet_placeholder = '..';
+  ignored_file_types = {};
+  show_prediction_strength = false;
 })
+
 
 -- ==============================================
 --                Custom Prefs
@@ -163,13 +161,32 @@ linters.setup {
   { exe = "codespell", filetypes = { "python" } },
 }
 
--- set formatters linters
+-- set additional formatters
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { exe = "isort", filetypes = { "python" } },
   { exe = "black", filetypes = { "python" } },
   { exe = "prettier", filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "html", "css", "scss", "sass" } },
 }
+
+-- cmp config (completion)
+lvim.builtin.cmp.experimental.ghost_text = true;
+
+-- cmp sources and priority
+lvim.builtin.cmp.sources = {
+  { name = "cmp_tabnine" },
+  { name = "nvim_lsp" },
+  { name = "path" },
+  { name = "luasnip" },
+  { name = "nvim_lua" },
+  { name = "buffer" },
+  { name = "calc" },
+  { name = "emoji" },
+  { name = "treesitter" },
+  { name = "crates" },
+  { name = "tmux" },
+}
+
 
 -- ==============================================
 --                Extra Config
