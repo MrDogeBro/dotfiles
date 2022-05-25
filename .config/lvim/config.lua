@@ -115,6 +115,11 @@ lvim.plugins = {
     --  vim.o.timeoutlen = 500
     -- end
   },
+  {
+    "folke/trouble.nvim",
+    cmd = "TroubleToggle",
+    requires = "kyazdani42/nvim-web-devicons",
+  },
 }
 
 -- tabnine config
@@ -128,7 +133,6 @@ tabnine:setup({
   ignored_file_types = {};
   show_prediction_strength = false;
 })
-
 
 -- ==============================================
 --                Custom Prefs
@@ -144,8 +148,31 @@ lvim.lsp.automatic_servers_installation = true
 -- keybinds
 lvim.builtin.which_key.mappings["w"] = {
   name = "Window",
-  v = { "<cmd>vsplit<CR>", "Vertical Split" },
-  h = { "<cmd>split<CR>", "Horizontal Split" },
+  v = { "<cmd>vsplit<cr>", "Vertical Split" },
+  h = { "<cmd>split<cr>", "Horizontal Split" },
+}
+
+lvim.builtin.which_key.mappings["d"] = {
+  name = "Diagnostics",
+  t = { "<cmd>TroubleToggle<cr>", "trouble" },
+  w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "workspace" },
+  d = { "<cmd>TroubleToggle document_diagnostics<cr>", "document" },
+  q = { "<cmd>TroubleToggle quickfix<cr>", "quickfix" },
+  l = { "<cmd>TroubleToggle loclist<cr>", "loclist" },
+  r = { "<cmd>TroubleToggle lsp_references<cr>", "references" },
+}
+
+lvim.builtin.which_key.mappings["t"] = {
+  name = "Todo",
+  t = { "<cmd>TodoTelescope<cr>", "todo" },
+  l = { "<cmd>TodoTrouble<cr>", "list" },
+}
+
+lvim.builtin.which_key.mappings["g"]["d"] = {
+  name = "Diff",
+  o = { "<cmd>DiffviewOpen<cr>", "open" },
+  q = { "<cmd>DiffviewClose<cr>", "quit" },
+  h = { "<cmd>DiffviewFileHistory<cr>", "file history" },
 }
 
 -- python settings
