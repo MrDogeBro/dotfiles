@@ -193,7 +193,10 @@ local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { exe = "isort", filetypes = { "python" } },
   { exe = "black", filetypes = { "python" } },
-  { exe = "prettier", filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "html", "css", "scss", "sass" } },
+  { exe = "prettier",
+    filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact", "html", "css", "scss", "sass",
+      "markdown",
+    } },
 }
 
 -- cmp config (completion)
