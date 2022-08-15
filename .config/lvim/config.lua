@@ -120,6 +120,14 @@ lvim.plugins = {
     cmd = "TroubleToggle",
     requires = "kyazdani42/nvim-web-devicons",
   },
+  {
+    "iamcco/markdown-preview.nvim",
+    run = "cd app && npm install",
+    ft = "markdown",
+    config = function()
+      vim.g.mkdp_auto_start = 1
+    end,
+  },
 }
 
 -- tabnine config
