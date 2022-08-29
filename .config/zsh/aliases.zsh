@@ -59,4 +59,8 @@ fi
 if [[ "$OSTYPE" == "darwin"* ]]; then
   alias ngxconf="$EDITOR /opt/homebrew/etc/nginx/nginx.conf"
   alias bs="brew services"
+
+  if [ -f "/opt/homebrew/Cellar/screen/4.9.0/bin/screen" ]; then
+    alias screen="/opt/homebrew/Cellar/screen/4.9.0/bin/screen"
+  fi
 fi
