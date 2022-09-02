@@ -17,6 +17,8 @@ lvim.colorscheme = "onedarker"
 lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
+lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
+lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 -- unmap a default keymapping
 -- lvim.keys.normal_mode["<C-Up>"] = ""
 -- edit a default keymapping
@@ -128,6 +130,9 @@ lvim.plugins = {
       vim.g.mkdp_auto_start = 1
     end,
   },
+  {
+    "matbme/JABS.nvim",
+  }
 }
 
 -- tabnine config
@@ -141,6 +146,8 @@ tabnine:setup({
   ignored_file_types = {};
   show_prediction_strength = false;
 })
+
+require 'jabs'.setup {}
 
 -- ==============================================
 --                Custom Prefs
@@ -181,6 +188,11 @@ lvim.builtin.which_key.mappings["g"]["d"] = {
   o = { "<cmd>DiffviewOpen<cr>", "open" },
   q = { "<cmd>DiffviewClose<cr>", "quit" },
   h = { "<cmd>DiffviewFileHistory<cr>", "file history" },
+}
+
+lvim.builtin.which_key.mappings["B"] = lvim.builtin.which_key.mappings.b
+lvim.builtin.which_key.mappings["b"] = {
+  "<cmd>JABSOpen<cr>", "JABS"
 }
 
 -- python settings
