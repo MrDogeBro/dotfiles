@@ -133,6 +133,22 @@ pyupdate () {
   echo -e "Dependencies transfered\n\nDone!" 
 }
 
+get_latest_gh_release() {
+  curl --silent "https://api.github.com/repos/$1/releases/latest" |
+    grep '"tag_name":' |
+    sed -E 's/.*"([^"]+)".*/\1/'
+}
+
+pocketclone () {
+  tag=$(get_latest_gh_release pocketbase/pocketbase)
+  file=pocketbase_$(echo $tag | awk 'sub(/^.{1}/,"")')_darwin_arm64.zip
+
+  wget https://github.com/pocketbase/pocketbase/releases/download/$tag/$file
+
+  tar -xvzf $file
+  rm -rf LICENSE.md $file
+}
+
 # =========================================
 #               background
 # =========================================
