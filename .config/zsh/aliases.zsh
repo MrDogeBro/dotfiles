@@ -31,6 +31,7 @@ alias gst="git status -sb"
 alias glog="git log --graph --date=format-local:\"%T %m-%d-%y\" --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset'"
 alias glr="git pull --rebase"
 alias glru="git pull --rebase upstream"
+alias gs="git switch"
 
 # shorthand python venv
 alias va="source .venv/bin/activate"
